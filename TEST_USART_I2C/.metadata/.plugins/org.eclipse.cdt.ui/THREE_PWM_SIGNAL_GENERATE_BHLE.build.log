@@ -1,0 +1,27 @@
+13:25:44 **** Incremental Build of configuration Debug for project THREE_PWM_SIGNAL_GENERATE_BHLE ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:230:27: warning: unused variable 'sMasterConfig' [-Wunused-variable]
+  230 |   TIM_MasterConfigTypeDef sMasterConfig = {0};
+      |                           ^~~~~~~~~~~~~
+../Core/Src/main.c:229:26: warning: unused variable 'sClockSourceConfig' [-Wunused-variable]
+  229 |   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+      |                          ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "THREE_PWM_SIGNAL_GENERATE_BHLE.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\STM32_prgrm\THREE_PWM_SIGNAL_GENERATE_BHLE\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="THREE_PWM_SIGNAL_GENERATE_BHLE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: THREE_PWM_SIGNAL_GENERATE_BHLE.elf
+ 
+arm-none-eabi-size   THREE_PWM_SIGNAL_GENERATE_BHLE.elf 
+arm-none-eabi-objdump -h -S  THREE_PWM_SIGNAL_GENERATE_BHLE.elf  > "THREE_PWM_SIGNAL_GENERATE_BHLE.list"
+arm-none-eabi-objcopy  -O ihex  THREE_PWM_SIGNAL_GENERATE_BHLE.elf  "THREE_PWM_SIGNAL_GENERATE_BHLE.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7104	     20	   1644	   8768	   2240	THREE_PWM_SIGNAL_GENERATE_BHLE.elf
+Finished building: default.size.stdout
+ 
+Finished building: THREE_PWM_SIGNAL_GENERATE_BHLE.hex
+Finished building: THREE_PWM_SIGNAL_GENERATE_BHLE.list
+ 
+ 
+
+13:25:47 Build Finished. 0 errors, 2 warnings. (took 2s.863ms)
+

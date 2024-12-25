@@ -1,0 +1,20 @@
+08:00:08 **** Incremental Build of configuration Debug for project INTERRUPT_BUTTON_SET ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "INTERRUPT_BUTTON_SET.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\STM32_prgrm\PWM_TEST_7\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INTERRUPT_BUTTON_SET.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INTERRUPT_BUTTON_SET.elf
+ 
+arm-none-eabi-size   INTERRUPT_BUTTON_SET.elf 
+arm-none-eabi-objdump -h -S  INTERRUPT_BUTTON_SET.elf  > "INTERRUPT_BUTTON_SET.list"
+arm-none-eabi-objcopy  -O ihex  INTERRUPT_BUTTON_SET.elf  "INTERRUPT_BUTTON_SET.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1084	      8	   1568	   2660	    a64	INTERRUPT_BUTTON_SET.elf
+Finished building: default.size.stdout
+Finished building: INTERRUPT_BUTTON_SET.hex
+Finished building: INTERRUPT_BUTTON_SET.list
+ 
+ 
+ 
+
+08:00:11 Build Finished. 0 errors, 0 warnings. (took 2s.332ms)
+

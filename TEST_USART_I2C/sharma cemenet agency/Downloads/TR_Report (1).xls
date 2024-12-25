@@ -1,0 +1,61 @@
+
+        
+    <table id="tbldetails" class="table table-bordered table-striped">
+            <tbody><tr>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Req.No</th>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Tour Type</th>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Tour From Date</th>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Tour To Date</th>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Requested Date</th>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">RM Status</th>
+                <th data-ng-show="Col1" class="" style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">HOD Status</th>
+                <th data-ng-show="Col2" style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">TD Status</th>
+                <th data-ng-show="Col3" style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Finance Status</th>
+                <th style="background-color: rgb(40, 71, 122); position: relative; top: 0px;">Name</th>
+            </tr>
+            <!-- ngRepeat: TR in TRDetails --><tr data-ng-repeat="TR in TRDetails" data-ng-style="{'background-color': (TR.ISAPPROVER2 === 1 ? 'yellow' : '')||(TR.RMSTATUS=== 'Request Cancelled'?'Tomato':'')}" data-ng-click="TRPOPUP(TR.TR_ID)" data-ng-class="{'selected':TR.TR_ID == selectedRow}" class="ng-scope">
+                <td data-ng-bind="TR.REQNO" class="ng-binding">2021-43970</td>
+                <td data-ng-bind="TR.TOURTYPE" class="ng-binding">Domestic</td>
+                <td data-ng-bind="TR.FROMDATE" class="ng-binding">03/10/2021</td>
+                <td data-ng-bind="TR.TODATE" class="ng-binding">06/10/2021</td>
+                <td data-ng-bind="TR.REQDATE" class="ng-binding">26/10/2021</td>
+                <td data-ng-bind="TR.RMSTATUS" class="ng-binding">Pending at Anurag  Kaushik</td>
+                <td data-ng-bind="TR.HODSTATUS" data-ng-show="Col1" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.TDSTATUS" data-ng-show="Col2" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.FINANCESTATUS" data-ng-show="Col3" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.EMPNAME" data-ng-show="Col(TR.APPLEVEL)" class="ng-binding">Krishna  Gavhane (13001644)</td>
+            </tr><!-- end ngRepeat: TR in TRDetails --><tr data-ng-repeat="TR in TRDetails" data-ng-style="{'background-color': (TR.ISAPPROVER2 === 1 ? 'yellow' : '')||(TR.RMSTATUS=== 'Request Cancelled'?'Tomato':'')}" data-ng-click="TRPOPUP(TR.TR_ID)" data-ng-class="{'selected':TR.TR_ID == selectedRow}" class="ng-scope">
+                <td data-ng-bind="TR.REQNO" class="ng-binding">2021-42890</td>
+                <td data-ng-bind="TR.TOURTYPE" class="ng-binding">Domestic</td>
+                <td data-ng-bind="TR.FROMDATE" class="ng-binding">16/09/2021</td>
+                <td data-ng-bind="TR.TODATE" class="ng-binding">18/09/2021</td>
+                <td data-ng-bind="TR.REQDATE" class="ng-binding">24/10/2021</td>
+                <td data-ng-bind="TR.RMSTATUS" class="ng-binding">Approved by Anurag  Kaushik</td>
+                <td data-ng-bind="TR.HODSTATUS" data-ng-show="Col1" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.TDSTATUS" data-ng-show="Col2" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.FINANCESTATUS" data-ng-show="Col3" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.EMPNAME" data-ng-show="Col(TR.APPLEVEL)" class="ng-binding">Krishna  Gavhane (13001644)</td>
+            </tr><!-- end ngRepeat: TR in TRDetails --><tr data-ng-repeat="TR in TRDetails" data-ng-style="{'background-color': (TR.ISAPPROVER2 === 1 ? 'yellow' : '')||(TR.RMSTATUS=== 'Request Cancelled'?'Tomato':'')}" data-ng-click="TRPOPUP(TR.TR_ID)" data-ng-class="{'selected':TR.TR_ID == selectedRow}" class="ng-scope" style="background-color: tomato;">
+                <td data-ng-bind="TR.REQNO" class="ng-binding">2021-42887</td>
+                <td data-ng-bind="TR.TOURTYPE" class="ng-binding">Domestic</td>
+                <td data-ng-bind="TR.FROMDATE" class="ng-binding">02/10/2021</td>
+                <td data-ng-bind="TR.TODATE" class="ng-binding">06/10/2021</td>
+                <td data-ng-bind="TR.REQDATE" class="ng-binding">24/10/2021</td>
+                <td data-ng-bind="TR.RMSTATUS" class="ng-binding">Request Cancelled</td>
+                <td data-ng-bind="TR.HODSTATUS" data-ng-show="Col1" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.TDSTATUS" data-ng-show="Col2" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.FINANCESTATUS" data-ng-show="Col3" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.EMPNAME" data-ng-show="Col(TR.APPLEVEL)" class="ng-binding">Krishna  Gavhane (13001644)</td>
+            </tr><!-- end ngRepeat: TR in TRDetails --><tr data-ng-repeat="TR in TRDetails" data-ng-style="{'background-color': (TR.ISAPPROVER2 === 1 ? 'yellow' : '')||(TR.RMSTATUS=== 'Request Cancelled'?'Tomato':'')}" data-ng-click="TRPOPUP(TR.TR_ID)" data-ng-class="{'selected':TR.TR_ID == selectedRow}" class="ng-scope selected">
+                <td data-ng-bind="TR.REQNO" class="ng-binding">2021-41921</td>
+                <td data-ng-bind="TR.TOURTYPE" class="ng-binding">Domestic</td>
+                <td data-ng-bind="TR.FROMDATE" class="ng-binding">18/10/2021</td>
+                <td data-ng-bind="TR.TODATE" class="ng-binding">22/10/2021</td>
+                <td data-ng-bind="TR.REQDATE" class="ng-binding">23/10/2021</td>
+                <td data-ng-bind="TR.RMSTATUS" class="ng-binding">Approved by Anurag  Kaushik</td>
+                <td data-ng-bind="TR.HODSTATUS" data-ng-show="Col1" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.TDSTATUS" data-ng-show="Col2" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.FINANCESTATUS" data-ng-show="Col3" class="ng-binding">NA</td>
+                <td data-ng-bind="TR.EMPNAME" data-ng-show="Col(TR.APPLEVEL)" class="ng-binding">Krishna  Gavhane (13001644)</td>
+            </tr><!-- end ngRepeat: TR in TRDetails -->
+        </tbody></table>

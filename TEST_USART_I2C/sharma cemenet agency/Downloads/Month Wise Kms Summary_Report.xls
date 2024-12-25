@@ -1,0 +1,61 @@
+
+                <div>
+                    <table id="tblHead" width="100%" cellpadding="2" cellspacing="0">
+                        <tbody><tr>
+                            <td colspan="4" class="NewReportCss">
+                                <h3 class="heading">
+                                    Month Wise Kms Summary
+                                </h3>
+                            </td>
+                            <td id="cmpLogoDiv" align="right" colspan="4"><img border="0" height="40" src="http://ctyf.co.in/images/Provider_Logo/JK Cement New_1763.png"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"></td>
+                        </tr>
+                        <tr><td colspan="4"><b>Report For : Nov 2022</b></td></tr>
+                    </tbody></table>
+                </div>
+
+                <div align="center" id="noDataFoundDiv" style="display: block;">
+                    <span id="actualmap_lblMsg" class="message"></span>
+                </div>
+
+                <div id="tblFixed" class="sticky-table sticky-headers" style="height: 651px;">
+                    
+                    <div>
+	<table border="1" cellspacing="0" rules="all" id="actualmap_GridView1" style="width:100%;border-collapse:collapse;">
+		<thead>
+			<tr class="sticky-row" style="font-weight:bold;">
+				<th class="sn" scope="col">SN</th><th scope="col">GroupName</th><th scope="col">Total Days</th><th scope="col">Total Offline</th><th scope="col">Vehicle</th><th scope="col">12 Nov</th><th scope="col">13 Nov</th><th scope="col">14 Nov</th><th scope="col">15 Nov</th><th scope="col">16 Nov</th><th scope="col">17 Nov</th><th scope="col">18 Nov</th><th scope="col">Total</th>
+			</tr>
+		</thead><tbody>
+			<tr valign="top">
+				<td>
+                                    1
+                                </td><td>&nbsp;</td><td>7</td><td>0</td><td>RJ11RB1971</td><td>113.25</td><td>178.60</td><td>221.23</td><td>47.77</td><td>179.72</td><td>145.04</td><td>14.87</td><td>900.48</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+                </div>
+                <div>
+                    
+                    
+                </div>
+                <div>
+                    
+                    <div>
+
+</div>
+                </div>
+
+                <div>
+                    
+                    <div>
+
+</div>
+                </div>
+
+                <div id="pnlRight">
+                </div>
+            

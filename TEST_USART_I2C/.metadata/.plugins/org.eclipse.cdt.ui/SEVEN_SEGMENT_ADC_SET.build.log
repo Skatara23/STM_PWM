@@ -1,0 +1,50 @@
+19:36:06 **** Incremental Build of configuration Debug for project SEVEN_SEGMENT_ADC_SET ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:96:3: warning: "/*" within comment [-Wcomment]
+   96 |   /* USER CODE END SysInit */
+      |    
+../Core/Src/main.c:119:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  119 |   sprintf(msg,"%hu\r\n",test);
+      |   ^~~~~~~
+../Core/Src/main.c:119:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:121:44: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  121 |   HAL_UART_Transmit(&huart1,(uint8_t *)msg,strlen(msg),100000);
+      |                                            ^~~~~~
+../Core/Src/main.c:121:44: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   20 | #include "main.h"
+  +++ |+#include <string.h>
+   21 | 
+../Core/Src/main.c:123:4: warning: implicit declaration of function 'displayNumber' [-Wimplicit-function-declaration]
+  123 |    displayNumber(test);
+      |    ^~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:134:6: warning: conflicting types for 'displayNumber'
+  134 | void displayNumber(uint8_t number) {
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:123:4: note: previous implicit declaration of 'displayNumber' was here
+  123 |    displayNumber(test);
+      |    ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "SEVEN_SEGMENT_ADC_SET.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\STM32_prgrm\SEVEN_SEGMENT_ADC_SET\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SEVEN_SEGMENT_ADC_SET.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SEVEN_SEGMENT_ADC_SET.elf
+ 
+arm-none-eabi-size   SEVEN_SEGMENT_ADC_SET.elf 
+arm-none-eabi-objdump -h -S  SEVEN_SEGMENT_ADC_SET.elf  > "SEVEN_SEGMENT_ADC_SET.list"
+arm-none-eabi-objcopy  -O ihex  SEVEN_SEGMENT_ADC_SET.elf  "SEVEN_SEGMENT_ADC_SET.hex"
+   text	   data	    bss	    dec	    hex	filename
+  13356	    120	   1712	  15188	   3b54	SEVEN_SEGMENT_ADC_SET.elf
+Finished building: default.size.stdout
+ 
+Finished building: SEVEN_SEGMENT_ADC_SET.hex
+ 
+Finished building: SEVEN_SEGMENT_ADC_SET.list
+ 
+
+19:36:10 Build Finished. 0 errors, 7 warnings. (took 4s.143ms)
+

@@ -1,0 +1,10 @@
+21:03:30 **** Incremental Build of configuration Debug for project SEVEN_SEGMENT_TEST ****
+make -j4 all 
+arm-none-eabi-size   SEVEN_SEGMENT_TEST.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4660	     40	   1568	   6268	   187c	SEVEN_SEGMENT_TEST.elf
+Finished building: default.size.stdout
+ 
+
+21:03:31 Build Finished. 0 errors, 0 warnings. (took 947ms)
+

@@ -1,0 +1,63 @@
+#include "stm32f4xx.h"
+
+#define LED_PIN 		13
+#define LED_PORT 		GPIOA
+
+volatile uint32_t millis = 0;
+
+void SysTick_Handler(void)
+{
+    millis++;  // Increment the millisecond counter
+}
+
+void delay(uint32_t ms)
+{
+    uint32_t start = millis;
+    while ((millis - start) < ms)
+    {
+        // Wait until the desired milliseconds have elapsed
+    }
+}
+
+void GPIO_Init(void)
+{
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;  // Enable the GPIOA peripheral clock
+
+    GPIOA->MODER &= ~(GPIO_MODER_MODER13);  // Clear the mode bits for pin 13
+    GPIOA->MODER |= (GPIO_MODER_MODER13_0);  // Set pin 13 as output
+
+    GPIOA->OTYPER &= ~(GPIO_OTYPER_OT_13);  // Set pin 13 as push-pull
+
+    GPIOA->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR13);  // Clear the speed bits for pin 13
+    GPIOA->OSPEEDR |= (GPIO_OSPEEDER_OSPEEDR13);  // Set pin 13 as high-speed
+
+    GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPDR13);  // Clear the pull-up/pull-down bits for pin 13
+}
+
+void delay_systick(uint32_t ms)
+{
+    uint32_t start = millis;
+    while ((millis - start) < ms)
+    {
+        // Wait until the desired milliseconds have elapsed
+    }
+}
+
+int main(void)
+{
+    // Configure the SysTick timer
+    SysTick->LOAD = (SystemCoreClock / 1000) - 1;  // Set the reload value for a 1ms interrupt
+    SysTick->VAL = 0;                             // Reset the SysTick counter value
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk |  // Use the processor clock as the SysTick clock source
+                    SysTick_CTRL_TICKINT_Msk |    // Enable SysTick interrupt
+                    SysTick_CTRL_ENABLE_Msk;      // Enable the SysTick timer
+
+    GPIO_Init();  // Configure the LED pin
+
+    // Main loop
+    while (1)
+    {
+        GPIOA->ODR ^= (1 << 13);  // Toggle the LED state
+        delay_systick(1000);           // Delay for 1 second
+    }
+}

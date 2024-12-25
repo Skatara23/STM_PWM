@@ -1,0 +1,41 @@
+10:02:12 **** Incremental Build of configuration Release for project adc_hall ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:43: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  121 |    HAL_UART_Transmit(&huart1,(float *)msg,strlen(msg),10000);
+      |                                           ^~~~~~
+../Core/Src/main.c:121:43: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+../Core/Src/main.c:121:30: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |    HAL_UART_Transmit(&huart1,(float *)msg,strlen(msg),10000);
+      |                              ^~~~~~~~~~~~
+      |                              |
+      |                              float *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:749:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'float *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "adc_hall.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\STM32_prgrm\adc_hall\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="adc_hall.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: adc_hall.elf
+ 
+arm-none-eabi-size   adc_hall.elf 
+arm-none-eabi-objdump -h -S  adc_hall.elf  > "adc_hall.list"
+arm-none-eabi-objcopy  -O ihex  adc_hall.elf  "adc_hall.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9400	    120	   1712	  11232	   2be0	adc_hall.elf
+Finished building: default.size.stdout
+ 
+Finished building: adc_hall.list
+Finished building: adc_hall.hex
+ 
+ 
+
+10:02:17 Build Finished. 0 errors, 3 warnings. (took 5s.5ms)
+

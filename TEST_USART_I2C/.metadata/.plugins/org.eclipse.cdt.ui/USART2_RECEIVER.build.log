@@ -1,0 +1,20 @@
+09:09:56 **** Incremental Build of configuration Debug for project USART2_RECEIVER ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "USART2_RECEIVER.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_prgrm\usart_rx_tx\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART2_RECEIVER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART2_RECEIVER.elf
+ 
+arm-none-eabi-size   USART2_RECEIVER.elf 
+arm-none-eabi-objdump -h -S  USART2_RECEIVER.elf  > "USART2_RECEIVER.list"
+arm-none-eabi-objcopy  -O ihex  USART2_RECEIVER.elf  "USART2_RECEIVER.hex"
+   text	   data	    bss	    dec	    hex	filename
+    952	      8	   1568	   2528	    9e0	USART2_RECEIVER.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART2_RECEIVER.hex
+Finished building: USART2_RECEIVER.list
+ 
+ 
+
+09:09:58 Build Finished. 0 errors, 0 warnings. (took 2s.203ms)
+

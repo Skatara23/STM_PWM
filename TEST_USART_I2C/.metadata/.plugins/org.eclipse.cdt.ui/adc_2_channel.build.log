@@ -1,0 +1,21 @@
+09:50:49 **** Incremental Build of configuration Debug for project adc_2_channel ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:46:4: error: expected expression before '/' token
+   46 |   {/wait here till the ADC Conversion is not complete/}
+      |    ^
+../Src/main.c:48:3: warning: implicit declaration of function '_delay_ms' [-Wimplicit-function-declaration]
+   48 |   _delay_ms(100);
+      |   ^~~~~~~~~
+../Src/main.c:53:4: error: expected expression before '/' token
+   53 |   {/wait here till the ADC Conversion is not complete/}
+      |    ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+09:50:50 Build Failed. 4 errors, 1 warnings. (took 968ms)
+

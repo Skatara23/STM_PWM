@@ -1,0 +1,10 @@
+09:06:39 **** Incremental Build of configuration Debug for project usart2_code_3_23 ****
+make -j4 all 
+arm-none-eabi-size   usart2_code_3_23.elf 
+   text	   data	    bss	    dec	    hex	filename
+    964	      8	   1568	   2540	    9ec	usart2_code_3_23.elf
+Finished building: default.size.stdout
+ 
+
+09:06:40 Build Finished. 0 errors, 0 warnings. (took 1s.16ms)
+

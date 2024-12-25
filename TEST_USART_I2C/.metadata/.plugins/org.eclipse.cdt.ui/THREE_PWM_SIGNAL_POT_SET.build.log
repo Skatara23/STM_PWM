@@ -1,0 +1,10 @@
+16:43:22 **** Incremental Build of configuration Debug for project THREE_PWM_SIGNAL_POT_SET ****
+make -j4 all 
+arm-none-eabi-size   THREE_PWM_SIGNAL_POT_SET.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7128	     20	   1644	   8792	   2258	THREE_PWM_SIGNAL_POT_SET.elf
+Finished building: default.size.stdout
+ 
+
+16:43:24 Build Finished. 0 errors, 0 warnings. (took 1s.933ms)
+

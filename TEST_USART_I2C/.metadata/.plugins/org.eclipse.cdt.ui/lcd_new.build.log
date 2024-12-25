@@ -1,0 +1,9 @@
+16:48:22 **** Clean-only build of configuration Debug for project lcd_new ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf default.size.stdout lcd_new.elf lcd_new.hex lcd_new.list lcd_new.map
+ 
+
+16:48:23 Build Finished. 0 errors, 0 warnings. (took 438ms)
+

@@ -1,0 +1,19 @@
+19:56:44 **** Incremental Build of configuration Debug for project i2c_code_1_hall ****
+make -j4 all 
+arm-none-eabi-gcc -o "i2c_code_1_hall.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_prgrm\i2c_code_1_hall\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="i2c_code_1_hall.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: i2c_code_1_hall.elf
+ 
+arm-none-eabi-size   i2c_code_1_hall.elf 
+arm-none-eabi-objdump -h -S  i2c_code_1_hall.elf  > "i2c_code_1_hall.list"
+arm-none-eabi-objcopy  -O ihex  i2c_code_1_hall.elf  "i2c_code_1_hall.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8376	     40	   1656	  10072	   2758	i2c_code_1_hall.elf
+Finished building: default.size.stdout
+ 
+Finished building: i2c_code_1_hall.hex
+ 
+Finished building: i2c_code_1_hall.list
+ 
+
+19:56:50 Build Finished. 0 errors, 0 warnings. (took 5s.815ms)
+

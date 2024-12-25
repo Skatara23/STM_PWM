@@ -1,0 +1,29 @@
+#include "stm32f4xx.h"
+#define GPIOAEN	(1U<<0)
+
+
+int main()
+{
+	RCC->AHB1ENR|=GPIOAEN;		//enabling the gpio port for led connectiom
+	GPIOA->MODER|=(1U<<0);		//moder set as 1 with bit 0
+	//GPIOA->MODER&=~(1U<<1)
+	SysTick-> CTRL|=(1U<<2); // SELECT CLOCK SOUCE AS INTRTNAL / PROCESSOR CLOCK IN SYSTICK REGISTER
+
+
+	while(1)
+	{	// for 0.1 sec reload the value
+
+		SysTick -> LOAD =3200000;
+
+		SysTick->VAL=0	;	//START FOR 0 VALUE
+		SysTick->CTRL|=(1U<<0);		//ENABLE THE SYSTICK GERNATER
+		// wait here until reload point is not recleared the register
+		while(SysTick -> CTRL & (1U<<16) == 0)
+		{}
+		//now toggle the led
+		GPIOA->ODR^=(1U<<0);	//led is on
+
+		SysTick->CTRL&=~(1U<<0);		// led is off
+	}
+
+}

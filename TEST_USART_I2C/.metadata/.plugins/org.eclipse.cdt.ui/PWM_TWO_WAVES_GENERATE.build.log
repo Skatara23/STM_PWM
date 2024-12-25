@@ -1,0 +1,17 @@
+21:43:20 **** Incremental Build of configuration Release for project PWM_TWO_WAVES_GENERATE ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PWM_TWO_WAVES_GENERATE.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_prgrm\PWM_TWO_WAVES_GENERATE\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_TWO_WAVES_GENERATE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_TWO_WAVES_GENERATE.elf
+ 
+arm-none-eabi-size   PWM_TWO_WAVES_GENERATE.elf 
+arm-none-eabi-objdump -h -S  PWM_TWO_WAVES_GENERATE.elf  > "PWM_TWO_WAVES_GENERATE.list"
+   text	   data	    bss	    dec	    hex	filename
+    784	      8	   1568	   2360	    938	PWM_TWO_WAVES_GENERATE.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_TWO_WAVES_GENERATE.list
+ 
+
+21:43:23 Build Finished. 0 errors, 0 warnings. (took 2s.187ms)
+

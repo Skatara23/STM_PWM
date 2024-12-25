@@ -1,0 +1,18 @@
+11:11:01 **** Incremental Build of configuration Debug for project timer1_delay_generation ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/timer2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/timer2.d" -MT"Src/timer2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer2.o"
+arm-none-eabi-gcc -o "timer1_delay_generation.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_prgrm\timer1_delay_generation\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="timer1_delay_generation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: timer1_delay_generation.elf
+ 
+arm-none-eabi-size   timer1_delay_generation.elf 
+arm-none-eabi-objdump -h -S  timer1_delay_generation.elf  > "timer1_delay_generation.list"
+   text	   data	    bss	    dec	    hex	filename
+    700	      8	   1568	   2276	    8e4	timer1_delay_generation.elf
+Finished building: default.size.stdout
+ 
+Finished building: timer1_delay_generation.list
+ 
+
+11:11:03 Build Finished. 0 errors, 0 warnings. (took 1s.672ms)
+

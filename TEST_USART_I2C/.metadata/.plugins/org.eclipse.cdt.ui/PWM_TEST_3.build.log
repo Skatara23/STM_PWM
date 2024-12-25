@@ -1,0 +1,10 @@
+09:42:35 **** Incremental Build of configuration Debug for project PWM_TEST_3 ****
+make -j4 all 
+arm-none-eabi-size   PWM_TEST_3.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7764	     24	   1640	   9428	   24d4	PWM_TEST_3.elf
+Finished building: default.size.stdout
+ 
+
+09:42:36 Build Finished. 0 errors, 0 warnings. (took 720ms)
+

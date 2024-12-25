@@ -1,0 +1,20 @@
+09:50:40 **** Incremental Build of configuration Debug for project practice1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "practice1.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_prgrm\practice1\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="practice1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: practice1.elf
+ 
+arm-none-eabi-size   practice1.elf 
+arm-none-eabi-objdump -h -S  practice1.elf  > "practice1.list"
+arm-none-eabi-objcopy  -O ihex  practice1.elf  "practice1.hex"
+   text	   data	    bss	    dec	    hex	filename
+    944	      8	   1568	   2520	    9d8	practice1.elf
+Finished building: default.size.stdout
+ 
+Finished building: practice1.list
+Finished building: practice1.hex
+ 
+ 
+
+09:50:42 Build Finished. 0 errors, 0 warnings. (took 2s.15ms)
+

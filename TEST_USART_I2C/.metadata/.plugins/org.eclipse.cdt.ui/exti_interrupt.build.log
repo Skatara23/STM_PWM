@@ -1,0 +1,49 @@
+13:55:43 **** Incremental Build of configuration Debug for project exti_interrupt ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:58:
+E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:174:3: error: #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  174 |  #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+      |   ^~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:68:3: error: 'RCC' undeclared (first use in this function)
+   68 |   RCC->APB2ENR |=SYSCFGEN;
+      |   ^~~
+../Src/main.c:68:3: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:74:4: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIOAEN'?
+   74 |    GPIOA->MODER|=(1<<0);
+      |    ^~~~~
+      |    GPIOAEN
+../Src/main.c:76:5: error: 'GPIOB' undeclared (first use in this function); did you mean 'GPIOBEN'?
+   76 |     GPIOB->MODER=0;
+      |     ^~~~~
+      |     GPIOBEN
+../Src/main.c:81:5: error: 'SYSCFG' undeclared (first use in this function); did you mean 'SYSCFGEN'?
+   81 |     SYSCFG -> EXTICR[0] |=(1U<<0);
+      |     ^~~~~~
+      |     SYSCFGEN
+../Src/main.c:84:5: error: 'EXTI' undeclared (first use in this function)
+   84 |     EXTI->IMR |=(1U<<0);
+      |     ^~~~
+../Src/main.c:90:5: warning: implicit declaration of function 'NVIC_SetPriority' [-Wimplicit-function-declaration]
+   90 |     NVIC_SetPriority(EXTI0_IRQn, 1);
+      |     ^~~~~~~~~~~~~~~~
+../Src/main.c:90:22: error: 'EXTI0_IRQn' undeclared (first use in this function)
+   90 |     NVIC_SetPriority(EXTI0_IRQn, 1);
+      |                      ^~~~~~~~~~
+../Src/main.c:91:5: warning: implicit declaration of function 'NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   91 |     NVIC_EnableIRQ(EXTI0_IRQn);
+      |     ^~~~~~~~~~~~~~
+../Src/main.c: In function 'EXTI0_IRQHandler':
+../Src/main.c:101:7: error: 'EXTI' undeclared (first use in this function)
+  101 |   if (EXTI->PR & (1U<<0)) {
+      |       ^~~~
+../Src/main.c:107:9: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIOAEN'?
+  107 |         GPIOA->ODR^=(1U<<0);
+      |         ^~~~~
+      |         GPIOAEN
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+13:55:44 Build Failed. 10 errors, 2 warnings. (took 625ms)
+

@@ -1,0 +1,20 @@
+11:09:04 **** Incremental Build of configuration Release for project button_hall ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "button_hall.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\STM32_prgrm\button_hall\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="button_hall.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: button_hall.elf
+ 
+arm-none-eabi-size   button_hall.elf 
+arm-none-eabi-objdump -h -S  button_hall.elf  > "button_hall.list"
+arm-none-eabi-objcopy  -O ihex  button_hall.elf  "button_hall.hex"
+   text	   data	    bss	    dec	    hex	filename
+   2836	     20	   1572	   4428	   114c	button_hall.elf
+Finished building: default.size.stdout
+ 
+Finished building: button_hall.hex
+ 
+Finished building: button_hall.list
+ 
+
+11:09:11 Build Finished. 0 errors, 0 warnings. (took 7s.315ms)
+

@@ -1,0 +1,27 @@
+00:03:25 **** Incremental Build of configuration Release for project ADC_TEST_103 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:76:7: warning: unused variable 'msg' [-Wunused-variable]
+   76 |  char msg[10];
+      |       ^~~
+../Core/Src/main.c:75:8: warning: variable 'test' set but not used [-Wunused-but-set-variable]
+   75 |  float test;
+      |        ^~~~
+arm-none-eabi-gcc -o "ADC_TEST_103.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\STM32_prgrm\ADC_TEST_103\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_TEST_103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_TEST_103.elf
+ 
+arm-none-eabi-size   ADC_TEST_103.elf 
+arm-none-eabi-objdump -h -S  ADC_TEST_103.elf  > "ADC_TEST_103.list"
+arm-none-eabi-objcopy  -O ihex  ADC_TEST_103.elf  "ADC_TEST_103.hex"
+   text	   data	    bss	    dec	    hex	filename
+   5180	     20	   1692	   6892	   1aec	ADC_TEST_103.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_TEST_103.list
+Finished building: ADC_TEST_103.hex
+ 
+ 
+
+00:03:28 Build Finished. 0 errors, 2 warnings. (took 2s.439ms)
+

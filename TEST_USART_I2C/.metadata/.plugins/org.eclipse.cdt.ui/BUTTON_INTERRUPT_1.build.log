@@ -1,0 +1,19 @@
+09:54:47 **** Incremental Build of configuration Debug for project BUTTON_INTERRUPT_1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:243:18: error: 'BUTTON_PIN' undeclared (first use in this function)
+  243 |  if (GPIO_Pin == BUTTON_PIN) {
+      |                  ^~~~~~~~~~
+../Core/Src/main.c:243:18: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:245:29: error: 'LED_PORT' undeclared (first use in this function)
+  245 |          HAL_GPIO_TogglePin(LED_PORT, LED_PIN);
+      |                             ^~~~~~~~
+../Core/Src/main.c:245:39: error: 'LED_PIN' undeclared (first use in this function)
+  245 |          HAL_GPIO_TogglePin(LED_PORT, LED_PIN);
+      |                                       ^~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+09:54:49 Build Failed. 4 errors, 0 warnings. (took 2s.87ms)
+

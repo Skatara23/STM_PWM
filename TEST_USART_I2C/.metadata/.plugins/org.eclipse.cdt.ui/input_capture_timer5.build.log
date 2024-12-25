@@ -1,0 +1,24 @@
+14:55:02 **** Incremental Build of configuration Debug for project input_capture_timer5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"E:/STM32_prgrm/Chip_Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'TIM5_IRQHandler':
+../Src/main.c:9:18: warning: unused variable 'capturedValue' [-Wunused-variable]
+    9 |         uint32_t capturedValue = TIM5->CCR1;
+      |                  ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "input_capture_timer5.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_prgrm\input_capture_timer5\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="input_capture_timer5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: input_capture_timer5.elf
+ 
+arm-none-eabi-size   input_capture_timer5.elf 
+arm-none-eabi-objdump -h -S  input_capture_timer5.elf  > "input_capture_timer5.list"
+arm-none-eabi-objcopy  -O ihex  input_capture_timer5.elf  "input_capture_timer5.hex"
+   text	   data	    bss	    dec	    hex	filename
+    972	      8	   1568	   2548	    9f4	input_capture_timer5.elf
+Finished building: default.size.stdout
+ 
+Finished building: input_capture_timer5.hex
+Finished building: input_capture_timer5.list
+ 
+ 
+
+14:55:04 Build Finished. 0 errors, 1 warnings. (took 1s.906ms)
+

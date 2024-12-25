@@ -1,0 +1,10 @@
+12:38:17 **** Incremental Build of configuration Debug for project timer2_for_delay_generation ****
+make -j4 all 
+arm-none-eabi-size   timer2_for_delay_generation.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      8	   1568	   2400	    960	timer2_for_delay_generation.elf
+Finished building: default.size.stdout
+ 
+
+12:38:17 Build Finished. 0 errors, 0 warnings. (took 563ms)
+

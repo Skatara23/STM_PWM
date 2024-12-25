@@ -1,0 +1,30 @@
+2023-08-03 10:58:55,403 [ERROR] ServerAccessManage:1146 - Warning during Server Connection :  Unknown host sw-center.st.com
+2023-08-03 10:58:55,449 [INFO] MainUpdater:2854 - connection check result : 22
+2023-08-03 10:59:03,115 [ERROR] ServerAccessManage:1146 - Warning during Server Connection :  Unknown host sw-center.st.com
+2023-08-03 10:59:03,115 [INFO] MainUpdater:2854 - connection check result : 22
+2023-08-03 10:59:05,926 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to false
+2023-08-03 10:59:05,926 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-08-03 10:59:05,926 [INFO] MultiScanPanel:204 - Proxy status is invalid
+2023-08-03 10:59:05,926 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-08-03 10:59:08,571 [INFO] DetailPanel:341 - Set advertising image to C:/Users/This pc/STM32Cube/Repository/\en.prom-stm32h5-mcu-finder.jpg
+2023-08-03 11:01:02,698 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:01:02,714 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:01:02,714 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:01:03,393 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-08-03 11:01:03,393 [INFO] ApiDb:448 - Save user favorites file C:\Users\This pc/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2023-08-03 11:01:03,393 [INFO] ApiDb:452 - User favorites MCUs=[STM32F401RET6]
+2023-08-03 11:04:40,052 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:04:40,052 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:04:40,052 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:06:39,107 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:06:39,112 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:06:39,112 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:11:27,754 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:11:27,759 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:11:27,763 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:36:51,883 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:36:51,883 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:36:51,883 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:58:57,809 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:58:57,809 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-08-03 11:58:57,809 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com

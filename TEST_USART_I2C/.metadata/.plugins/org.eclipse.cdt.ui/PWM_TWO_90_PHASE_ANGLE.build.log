@@ -1,0 +1,10 @@
+21:00:25 **** Incremental Build of configuration Debug for project PWM_TWO_90_PHASE_ANGLE ****
+make -j4 all 
+arm-none-eabi-size   PWM_TWO_90_PHASE_ANGLE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12524	     20	   1788	  14332	   37fc	PWM_TWO_90_PHASE_ANGLE.elf
+Finished building: default.size.stdout
+ 
+
+21:00:26 Build Finished. 0 errors, 0 warnings. (took 820ms)
+
