@@ -1,0 +1,4 @@
+main.c:4:6:delay_ms	2
+main.c:12:6:TIM2_Configuration	1
+main.c:33:6:LED_PWM_SetDutyCycle	2
+main.c:43:5:main	2
